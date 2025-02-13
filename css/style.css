@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 16px;
+}
+
+/* Checkout Section */
+#checkout {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.checkout-container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-container label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.checkout-container input,
+.checkout-container select {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkout-container button {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+    .checkout-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .checkout-container h2 {
+        font-size: 24px;
+    }
+
+    .checkout-container label {
+        font-size: 14px;
+    }
+
+    .checkout-container input,
+    .checkout-container select {
+        font-size: 14px;
+    }
+
+    .checkout-container button {
+        font-size: 16px;
+    }
+}

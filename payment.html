@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pembayaran - MikroTik Voucher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Menghubungkan dengan file CSS -->
+    <!-- Menambahkan Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Menambahkan gaya untuk ikon salin */
+        .copy-icon {
+            font-size: 6px; /* Ukuran ikon lebih kecil (6px) */
+            color: #007bff; /* Warna ikon */
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 0; /* Mengurangi padding agar lebih kecil */
+            margin-left: 2px; /* Mengurangi jarak antara ikon dan nomor DANA */
+        }
+
+        /* Membuat tombol salin sejajar dengan nomor DANA tanpa jarak */
+        .dana-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .dana-container input {
+            border: none;
+            background: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 0; /* Menghapus margin untuk memastikan tombol salin tepat di sebelah nomor */
+        }
+    </style>
+    <script>
+        // Fungsi untuk menyalin nomor DANA ke clipboard
+        function copyToClipboard() {
+            var copyText = document.getElementById("danaNumber"); // ID dari elemen yang menyimpan nomor DANA
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // Untuk perangkat mobile
+
+            // Salin teks ke clipboard
+            document.execCommand("copy");
+
+            // Memberikan feedback kepada pengguna bahwa nomor telah disalin
+            alert("Nomor DANA telah disalin: " + copyText.value);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">MikroTik Voucher</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#voucher">Voucher</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="payment">
+        <div class="checkout-container">
+            <h2>Ringkasan Pembayaran</h2>
+            <form action="confirmation.html" method="POST">
+                <!-- Ringkasan Pembelian -->
+                <label for="voucher">Voucher yang Dipilih:</label>
+                <input type="text" id="voucher" name="voucher" value="Voucher 1 Minggu" readonly>
+
+                <label for="price">Harga:</label>
+                <input type="text" id="price" name="price" value="Rp 100,000" readonly>
+
+                <!-- Metode Pembayaran -->
+                <label for="payment-method">Metode Pembayaran:</label>
+                <input type="text" value="DANA" readonly>
+
+                <!-- Nomor WhatsApp untuk konfirmasi -->
+                <label for="whatsapp">Nomor WhatsApp</label>
+                <input type="text" id="whatsapp" name="whatsapp" value="082254747180" readonly>
+
+                <!-- Informasi Pembayaran DANA dengan Ikon Salin -->
+                <p>Silakan transfer ke nomor DANA berikut untuk melanjutkan pembayaran:</p>
+                <p><strong>Atas Nama: Ibnu Hakim</strong></p>
+                <div class="dana-container">
+                    <input type="text" id="danaNumber" value="082254747180" readonly>
+                    <button type="button" class="copy-icon" onclick="copyToClipboard()">
+                        <i class="fas fa-copy"></i> <!-- Ikon salin kecil -->
+                    </button>
+                </div>
+
+                <!-- Konfirmasi Pembayaran -->
+                <button type="submit" class="btn">Konfirmasi Pembayaran</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MikroTik Vouche

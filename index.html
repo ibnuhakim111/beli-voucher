@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pembelian Voucher MikroTik</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 10px 0;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Home Section */
+        #home {
+            background-color: #007bff;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 18px;
+        }
+
+        /* Voucher Section */
+        #voucher {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .voucher-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .voucher-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .voucher-item {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .voucher-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .voucher-item h3 {
+            margin: 15px 0;
+        }
+
+        .voucher-item .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Checkout Section */
+        #checkout {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        .checkout-container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .checkout-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkout-container label {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .checkout-container input, .checkout-container select {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .checkout-container button {
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsif untuk tampilan mobile */
+        @media (max-width: 768px) {
+            .price-info .price-item {
+                width: 45%;
+                margin: 10px auto;
+            }
+
+            .col-xs-4 {
+                width: 100%;
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            .sedang-faq {
+                font-size: 12px;
+            }
+
+            .price-info {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">MikroTik Voucher</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#voucher">Voucher</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Selamat Datang di Pembelian Voucher MikroTik</h1>
+            <p>Beli voucher MikroTik untuk akses hotspot dengan mudah!</p>
+            <a href="#voucher" class="btn">Lihat Voucher</a>
+        </div>
+    </section>
+
+    <section id="voucher">
+        <div class="voucher-container">
+            <h2>Pilih Voucher Anda</h2>
+            <div class="voucher-list">
+                <!-- Voucher 1 -->
+                <div class="voucher-item">
+                    <img src="img/voucher-3h.jpg" alt="Voucher 3 Hari">
+                    <h3>Voucher 3 Hari</h3>
+                    <p>Harga: Rp 50,000</p>
+                    <a href="checkout.html" class="btn">Beli Sekarang</a>
+                </div>
+                <!-- Voucher 2 -->
+                <div class="voucher-item">
+                    <img src="img/voucher-1w.jpg" alt="Voucher 1 Minggu">
+                    <h3>Voucher 1 Minggu</h3>
+                    <p>Harga: Rp 100,000</p>
+                    <a href="checkout.html" class="btn">Beli Sekarang</a>
+                </div>
+                <!-- Voucher 3 -->
+                <div class="voucher-item">
+                    <img src="img/voucher-1m.jpg" alt="Voucher 1 Bulan">
+                    <h3>Voucher 1 Bulan</h3>
+                    <p>Harga: Rp 200,000</p>
+                    <a href="checkout.html" class="btn">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MikroTik Voucher. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
